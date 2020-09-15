@@ -1,0 +1,350 @@
+<html>
+<head>
+<title>Affinity@ShoppingCart</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<style>
+.badge-notify{
+	background:red;
+    position:relative;
+    top: -20px;
+    right: 10px;
+}
+
+.my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+}
+
+.icon-bar {
+  width: 100%;
+  /*background-color: #555;*/
+  background-color:LightGray;
+  overflow: auto;
+}
+
+/************************************************Vertical Tab CSS***********************************/
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  /*background-color: #555;*/
+  width: 11%;
+  height: 500px;
+}
+
+.tab button {
+  display: block;
+  /*background-color: inherit;*/
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 18px;
+  border: 1px solid #ccc;
+  width: 88%;
+  border-left: none;
+  height: 500px;
+}
+
+/********************************************************css for products view*******************************************/
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 40px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/*******************************************CSS for buttons***************************************************/
+.button {
+  position: relative;
+  background-color: #5F9EA0;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:after {
+  content: "";
+  background: #90EE90;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+</style>
+</head>
+
+<body>
+<div class="icon-bar">
+    <h1><span style="font-size: 28px;font-weight: bold;padding: 12px 0;padding: 10px;color:white;font-family:Times New Roman">Affinity@Shopping</span>
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+		<span class="glyphicon glyphicon-user my-cart-icon"></span>
+      </div>
+    </h1>
+</div>
+</br>
+<div class="tab">
+  <button class="tablinks" onclick="openCategory(event, 'Mobiles')" id="defaultOpen">Mobiles</button>
+  <button class="tablinks" onclick="openCategory(event, 'Fashion')">Fashion</button>
+  <button class="tablinks" onclick="openCategory(event, 'Electronics')">Electronics</button>
+</div>
+
+<div id="Mobiles" class="tabcontent">
+<h3>Available Mobiles</h3>
+	</br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/m1.jpg" alt="Card image cap" width="200" height="200"/>
+				<p>Oppo F17</p>
+				<p>Price. $10</p>
+				<button class="button my-cart-btn" data-id="1" data-name="Oppo F17" data-summary="Launched in 2020" data-price="10" data-quantity="1" data-image="images/m1.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/m2.jpg" alt="Card image cap" width="200" height="200">
+				<p>Nokia C3</p>
+				<p>Price. $20</p>
+				<button class="button my-cart-btn" data-id="2" data-name="Nokia C3" data-summary="Launched in 2018" data-price="20" data-quantity="1" data-image="images/m2.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/m3.jpg" alt="Card image cap" width="200" height="200">
+				<p>Oppo X3</p>
+				<p>Price. $30</p>
+				<button class="button my-cart-btn" data-id="3" data-name="Oppo X3" data-summary="Launched in 2017" data-price="30" data-quantity="1" data-image="images/m3.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/m4.jpg" alt="Card image cap" width="200" height="200">
+				<p>Pocco X3 NFC</p>
+				<p>Price. $40</p>
+				<button class="button my-cart-btn" data-id="4" data-name="Pocco X3 NFC" data-summary="Launched in 2019" data-price="40" data-quantity="1" data-image="images/m4.jpg" >Add to Cart</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="Fashion" class="tabcontent">
+  <h3>Available Shirts</h3>
+  </br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/t1.jpg" alt="Card image cap" width="200" height="200"/>
+				<p>Navy Blue Checks Shirt</p>
+				<p>Price. $5</p>
+				<button class="button my-cart-btn" data-id="5" data-name="Navy Blue Checks" data-summary="Confortable in sunny days" data-price="5" data-quantity="1" data-image="images/t1.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/t2.jpg" alt="Card image cap" width="200" height="200">
+				<p>White Black Checks Shirt</p>
+				<p>Price. $20</p>
+				<button class="button my-cart-btn" data-id="6" data-name="White Black Checks" data-summary="Confortable in rainy days" data-price="20" data-quantity="1" data-image="images/t2.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/t3.jpg" alt="Card image cap" width="200" height="200">
+				<p>Formal Shirt</p>
+				<p>Price. $30</p>
+				<button class="button my-cart-btn" data-id="7" data-name="Formal Shirt" data-summary="Confortable in parties" data-price="30" data-quantity="1" data-image="images/t3.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/t4.jpg" alt="Card image cap" width="200" height="200">
+				<p>Plain White T-Shirt</p>
+				<p>Price. $10</p>
+				<button class="button my-cart-btn" data-id="8" data-name="Plain White T-Shirt" data-summary="Confortable in running" data-price="10" data-quantity="1" data-image="images/t4.jpg" >Add to Cart</button>
+			</div>
+		</div>
+	</div> 
+</div>
+
+<div id="Electronics" class="tabcontent">
+  <h3>Electronic Items</h3>
+  </br>
+	<div class="row">
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/e1.jpg" alt="Card image cap" width="200" height="200"/>
+				<p>I-Ball Headphones</p>
+				<p>Price. $10</p>
+				<button class="button my-cart-btn" data-id="9" data-name="I-Ball Headphones" data-summary="Launched in 2020" data-price="10" data-quantity="1" data-image="images/e1.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/e2.jpg" alt="Card image cap" width="200" height="200">
+				<p>Laptop,mouse and headphones</p>
+				<p>Price. $30</p>
+				<button class="button my-cart-btn" data-id="10" data-name="Laptop mouse and Headphones" data-summary="Launched in 2018" data-price="30" data-quantity="1" data-image="images/e2.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/e3.jpg" alt="Card image cap" width="200" height="200">
+				<p>LG Television Set</p>
+				<p>Price. $20</p>
+				<button class="button my-cart-btn" data-id="11" data-name="LG Television Set" data-summary="Launched in 2017" data-price="20" data-quantity="1" data-image="images/e3.jpg">Add to Cart</button>
+			</div>
+		</div>
+		<div class="column">
+			<div class="card">
+				<img class="card-img-top" src="images/e4.jpg" alt="Card image cap" width="200" height="200">
+				<p>Lenovo Professional Laptop</p>
+				<p>Price. $40</p>
+				<button class="button my-cart-btn" data-id="12" data-name="Lenovo Professonal Laptop" data-summary="Launched in 2010" data-price="40" data-quantity="1" data-image="images/e4.jpg" >Add to Cart</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-2.2.3.min.js"></script>
+<script type='text/javascript' src="js/bootstrap.min.js"></script>
+<script type='text/javascript' src="js/jquery.mycart.js"></script>
+<script type="text/javascript">
+function openCategory(evt, category) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(category).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+  
+$(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+}
+	
+
+$('.my-cart-btn').myCart({
+      currencySymbol: '$',
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      numberOfDecimals: 2,
+	  cartItems: [],
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+        checkoutString += "\n\n Product id \t Product Name \t Price \t Quantity Ordered";
+        $.each(products, function(){
+		  checkoutString += ("\n " + this.id + "        " + this.name + "        " + this.price + "        " + this.quantity);
+        });
+        alert(checkoutString)
+        console.log("checking out", products, totalPrice, totalQuantity);
+      },
+      getDiscountPrice: function(products, totalPrice, totalQuantity) {
+        console.log("calculating discount", products, totalPrice, totalQuantity);
+        return totalPrice * 0.5;
+      }
+    });
+});
+</script>
+</body>
+</html>
