@@ -15,6 +15,6 @@ https://www.jqueryscript.net/other/Simple-Shopping-Cart-Plugin-With-jQuery-Boots
 
 * To open the webapplication please double click on index.html file
 
-* "images" directory contains images which has been used in the project, "js" directory include the javascript files and "css" directory includes the .css files
+* "images" directory contains images which has been used in the project, "js" directory include the javascript files
 
 * Please go through cart_pop_up.png, checkout_message.png and home_page.png images to get an idea of webapplication.
