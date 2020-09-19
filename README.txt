@@ -5,16 +5,16 @@ https://www.jqueryscript.net/other/Simple-Shopping-Cart-Plugin-With-jQuery-Boots
 
 * The products from products list can be added to cart
 
-* The categories of products are Mobiles, Electornics and Fashion, each category has 4 products to display 
+* The categories of products are Mobiles, Electronics and Fashion, each category has 4 products to display 
 
-* The cart pop gives functionality to modify items by increasing, decreasing the quantity and removing the product itself.
+* The cart pop-up gives functionality to modify items by increasing, decreasing the quantity and removing the product itself.
 
-* Cart pop will show the total about which has to be paid.
+* Cart pop-up will show the total amount as well.
 
-* The checkout pop box shows additional information about the products added.
+* The checkout pop-up box shows additional information about the products added.
 
-* To open the webapplication double click on index.html file
+* To open the webapplication please double click on index.html file
 
-* "images" directory contains images which has been used in the project, "js" directory include the javascript files, "css" includes the .css files
+* "images" directory contains images which has been used in the project, "js" directory include the javascript files and "css" directory includes the .css files
 
-* you can go through cart_pop_up.png, checkout_message.png and home_page.png images to get an idea of webapplication.
+* Please go through cart_pop_up.png, checkout_message.png and home_page.png images to get an idea of webapplication.
